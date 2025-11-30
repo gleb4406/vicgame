@@ -4,6 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Coloring Book</title>
+     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+<script>
+  // инициализация VK Bridge при загрузке страницы
+  document.addEventListener('DOMContentLoaded', function() {
+    try {
+      vkBridge.send('VKWebAppInit');
+    } catch (e) {
+      console.warn('vkBridge init failed', e);
+    }
+  });
+</script>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1" style="width: 1920px; height: 1080px; background: url('Build/PalvordVK0.jpg.unityweb') center / cover"></canvas>
