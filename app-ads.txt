@@ -1,5 +1,5 @@
 google.com, pub-8388319376632401, DIRECT, f08c47fec0942fa0
-yandex.com, 100052046, DIRECT
+
 
 rubiconproject.com, 27840, DIRECT, 0bfd66d529a55807
 
