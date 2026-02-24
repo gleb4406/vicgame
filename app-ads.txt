@@ -1,6 +1,4 @@
-google.com, pub-8388319376632401, DIRECT, f08c47fec0942fa0
-
-
+## AdsTxtSite app-ads.txt - Updated at: 2025-09-17
 rubiconproject.com, 27840, DIRECT, 0bfd66d529a55807
 
 inmobi.com, e26b3ca44a074f1e8de7e4ff5b31f772, RESELLER, 83e75a7ae333ca9d
