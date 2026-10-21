@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — страница не найдена | VicGames</title>
+  <meta name="description" content="Страница не найдена. Вернитесь в каталог игр VicGames.">
+  <meta name="theme-color" content="#06070e">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/font-08.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/font-02.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .not-found { min-height: 100vh; display: grid; align-items: center; padding: 120px 0 70px; }
+    .not-found__code {
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 18vw, 11rem);
+      font-weight: 800;
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+    .not-found__text { max-width: 520px; color: var(--muted); margin-bottom: 28px; }
+    .not-found__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html" aria-label="VicGames — на главную">
+        <span class="logo__mark logo__mark--css" aria-hidden="true">V</span>
+        <span class="logo__text">VIC<em>GAMES</em></span>
+      </a>
+      <a class="btn btn--ghost btn--sm" href="index.html">На главную</a>
+    </div>
+  </header>
+
+  <main class="not-found">
+    <div class="container">
+      <p class="eyebrow">Ошибка 404</p>
+      <div class="not-found__code">404</div>
+      <h1>Эта страница потерялась в Backrooms</h1>
+      <p class="not-found__text">Такой страницы нет или она переехала. Зато каталог игр на месте — выбирайте, во что сыграть сегодня.</p>
+      <div class="not-found__actions">
+        <a class="btn btn--primary" href="index.html#games">Перейти к играм</a>
+        <a class="btn btn--ghost" href="index.html">На главную</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
