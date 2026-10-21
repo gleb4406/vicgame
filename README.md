@@ -31,4 +31,4 @@ tools/                   Служебные скрипты: генерация �
 - Facebook: https://www.facebook.com/groups/vicgame
 - X (Twitter): https://twitter.com/VIt40680951
 - YouTube: https://www.youtube.com/channel/UClowsW1garCcz-3X1Kv3A2A
-- Разработчик: Плюхин Виталий Александрович, г. Иркутск
+
