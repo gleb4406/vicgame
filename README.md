@@ -23,65 +23,7 @@ CNAME                    Домен для GitHub Pages (vicgames.ru)
 tools/                   Служебные скрипты: генерация иконок/OG и проверки в Chrome
 ```
 
-## Локальный запуск
 
-Из корня проекта:
-
-```powershell
-python -m http.server 8080
-```
-
-Затем откройте http://localhost:8080. Подойдёт и `npx serve .`, и Live Server в VS Code.
-
-## Деплой на vicgames.ru
-
-### Вариант 1. GitHub Pages
-
-1. Создайте репозиторий и загрузите туда файлы проекта (папка `tools` не обязательна).
-2. В Settings → Pages выберите ветку `main` и каталог `/ (root)`.
-3. Убедитесь, что в корне лежит файл `CNAME` с содержимым `vicgames.ru` (он уже есть).
-4. У регистратора домена настройте DNS:
-   - для apex-домена `vicgames.ru` — A-записи на `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`;
-   - для `www` — CNAME на `<ваш-логин>.github.io`.
-5. Дождитесь проверки DNS и включите **Enforce HTTPS** в настройках Pages.
-
-Официальная инструкция: https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site
-
-### Вариант 2. Cloudflare Pages / Netlify / Vercel
-
-1. Загрузите папку проекта как статический сайт (build command не нужен, output directory — корень).
-2. Добавьте домен `vicgames.ru` в настройках проекта и пропишите выданные DNS-записи у регистратора.
-3. HTTPS-сертификат выпустится автоматически.
-
-Для этих площадок файл `CNAME` можно оставить или удалить — он используется только GitHub Pages.
-
-### Вариант 3. Обычный хостинг (reg.ru, Beget, Timeweb)
-
-1. Загрузите содержимое проекта в `public_html` (или `www`) по FTP/SFTP.
-2. Привяжите домен к хостингу и включите бесплатный SSL (Let's Encrypt).
-3. Настройте редирект с `http://` на `https://` и с `www` на основной домен.
-
-### После запуска
-
-- Проверьте, что открываются `https://vicgames.ru/`, `https://vicgames.ru/privacy.html`, `https://vicgames.ru/robots.txt`, `https://vicgames.ru/sitemap.xml`.
-- Добавьте сайт в **Яндекс Вебмастер** и **Google Search Console**, отправьте `sitemap.xml` на индексацию.
-- Проверьте карточки соцсетей через валидатор Open Graph (например, https://developers.facebook.com/tools/debug/).
-- Для Google Play в поле «Сайт» и «Политика конфиденциальности» можно указать `https://vicgames.ru/` и `https://vicgames.ru/privacy.html`.
-
-## Как редактировать игры
-
-Карточки находятся в `index.html` внутри `<div class="games-grid" id="gamesGrid">`. У каждой карточки:
-
-- `data-genres` — жанры через пробел: `horror`, `puzzle`, `arcade`, `hidden`, `creative`, `online`;
-- `data-platforms` — платформы через пробел: `google`, `rustore`, `playgama`;
-- `data-title` — название для поиска;
-- ссылки в блоках `.game-card__links`.
-
-Если добавляете новый жанр или платформу, обновите массивы `validGenres` / `validPlatforms` и кнопки фильтра в `js/main.js`. Не забудьте добавить игру в `ItemList` JSON-LD в `<head>` и в раздел «Платформы».
-
-## Источники данных
-
-Названия, описания, возрастные рейтинги и иконки взяты из официальных карточек игр в Google Play и RuStore, обложки браузерных игр — с Playgama. Ссылки на игры перечислены в файле `Ссылки на Игры.txt`.
 
 ## Контакты
 
